@@ -1,0 +1,17 @@
+{% extends "rheader.html" %}
+{% block content %}
+<center><h1>Your Current Status</h1></center>
+	{% for x in d %}
+	<div class="center">
+		Driver Name:{{x.fname}} {{x.lname}}<br>
+		Phone No.:{{x.phone_no}}<br>
+		Picup:{{x.pickup}}<br>
+		Drop:{{x.drop}}<br>
+		OTP:{{x.otp}}<br>
+		<form action="/rider/remove/" method="post">{% csrf_token %}
+			<input type="hidden" name="duname" value="{{x.username}}">
+			<input type="submit" value="Cancle" width="10px" height="20px" color="green">
+		</form>
+	</div>
+	{% endfor %}
+{% endblock %}

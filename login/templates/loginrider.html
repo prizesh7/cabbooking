@@ -1,0 +1,23 @@
+{% extends "header.html" %}
+{% block content %}
+<center><h1>Indian Rider </h1></center>
+<div>
+ <font color="red"> {% if messages %}
+  {% for msg in messages %}
+    {{msg}}
+  {% endfor %}
+{% endif %}</font>
+  <form action="/login/authriderinfo/" method="post">{% csrf_token %}
+     <label for="uname">User Name</label>
+    <input type="text" id="uname" name="uname" placeholder="User name" required>
+
+     <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" placeholder="Enter password" required>
+    <a href="/login/forgot/">Forgot Password</a>
+
+    <input type="submit" value="LOG IN">
+  </form>
+</div>
+</body>
+</html>
+{% endblock %}

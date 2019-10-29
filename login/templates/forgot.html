@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+{% block content %}
+<center><h1>Indian Driver </h1></center>
+<div>
+  <font color="red"> {% if messages %}
+  {% for msg in messages %}
+    {{msg}}
+  {% endfor %}
+{% endif %}</font>
+  <form action="/login/forgotsend/" method="post">{% csrf_token %}
+    
+     <label for="uname">User Name</label>
+    <input type="text" id="uname" name="uname" placeholder="User name" required>
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "dheader.html" %}
+{% block content %}
+<center><h1>Your History</h1></center>
+	{% for x in d %}
+	<div class="center">
+		Rider Name:{{x.fname}} {{x.lname}}<br>
+		Picup:{{x.pickup}}<br>
+		Drop:{{x.drop}}<br>
+		Date:{{x.date}}<br>
+	</div>
+	{% endfor %}
+{% endblock %}

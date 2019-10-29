@@ -1,0 +1,63 @@
+{% extends "rheader.html" %}
+{% block content %}
+<head>
+  <style>
+    body{
+      background-image: linear-gradient(90deg, red , blue);
+    }
+</style>
+  </head>
+<div class="left">
+  <form action="/cabsearch/searchcab/" method="post">{% csrf_token %}
+  <ul>
+  <li><a class="active" href="/home/citytaxi/">CITY TAXI</a></li>
+  <li><a href="/home/outstation/">OUTSTATION</a></li>
+  <li><a href="/home/about/" aling="right">RENTAL</a></li>
+  </ul>
+    <h2><font-color="red">You have successfully loggedin</font></h2>
+{% if messages %}
+  {% for msg in messages %}
+    <font color="red">{{msg}}</font><br>
+  {% endfor %}
+{% endif %}
+</center>
+    <label for="pickup">PICKUP</label>
+    <select name="pickup">
+      <option>VILLEY PARLE</option>
+       <option>BAND STAND</option>
+        <option>OCEAN BEACH</option>
+         <option>NORTHEN BAND</option>
+          <option>KAMOTI BAUG</option>
+           <option>ANAND NAGAR</option>
+            <option>JUHU</option>
+              <option>VARACHA</option>
+              <option>MG ROAD</option>
+       </select>         
+    <label for="drop">DROP</label>
+    <select name="drop">
+      <option>VILLEY PARLE</option>
+       <option>BAND STAND</option>
+        <option>OCEAN BEACH</option>
+         <option>NORTHEN BAND</option>
+          <option>KAMOTI BAUG</option>
+           <option>ANAND NAGAR</option>
+            <option>JUHU</option>
+              <option>VARACHA</option>
+              <option>MG ROAD</option>
+       </select>    
+       <label for="texitype">TEXI TYPE</label>
+       <select name="texitype">
+      <option>MINI</option>
+       <option>PRIME SEDAN</option>
+        <option>PRIME PLAY</option>
+         <option>PRIME SUV</option>
+          <option>LUX</option>
+           <option>AUTO</option>
+       </select>         
+
+    <input type="submit" value="Search Cab">
+  </form>
+</div>
+
+
+{% endblock %}

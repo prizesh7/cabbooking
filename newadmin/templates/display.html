@@ -1,0 +1,37 @@
+
+<html>
+<head>
+<style>
+
+body
+{
+  background-color:blue;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>username</th>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>phoneno</th>
+    <th>email</th>
+    <th>city</th>
+ </tr>
+  {% for item in d %}
+  <tr>
+    <td>{{ item.username }}</td>
+    <td>{{ item.fname }}</td>
+    <td>{{ item.lname }}</td>
+    <td>{{ item.phn_no }}</td>
+    <td>{{ item.email }}</td>
+    <td>{{ item.password }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+
+
+

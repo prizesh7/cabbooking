@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+lr {
+	float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+lr a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+lr a:hover {
+  background-color: #111;
+}
+
+li a:hover {
+  background-color: #111;
+}
+input[type=text],[type=password],[type=email],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=lable]{
+  text-align: left;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+div {
+  margin-top: 100px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  width:30%;
+  padding: 20px;
+}
+.left{
+  margin-left: 60px;
+  ma
+}
+.right{
+  margin-left:800px;
+}
+body
+{
+    
+    background-image: linear-gradient(90deg, red , blue);
+    
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="/newadmin/login/">Admin</a></li>
+  <li><a class="active" href="/home/home/">Home</a></li>
+  <li><a href="/home/news/">News</a></li>
+  <li><a href="/home/about/" >About</a></li>
+  <li><a href="/home/contact/">Contact</a></li>
+  <lr><a href="/signup/select/">SignUp</a></lr>
+  <lr><a href="/login/select1/">Login</a></lr>
+</ul>
+<div class="left">
+  <form action="/cabsearch/searchcab/" method="post">{% csrf_token %}
+  <ul>
+  <li><a class="active" href="/home/citytaxi/">CITY TAXI</a></li>
+  <li><a href="/home/outstation/">OUTSTATION</a></li>
+  <li><a href="/home/rental/" aling="right">RENTAL</a></li>
+  </ul><br><br>
+    <label for="pickup">PICKUP</label>
+    <select name="pickup">
+      <option>VILLEY PARLE</option>
+       <option>BAND STAND</option>
+        <option>OCEAN BEACH</option>
+         <option>NORTHEN BAND</option>
+          <option>KAMOTI BAUG</option>
+           <option>ANAND NAGAR</option>
+            <option>JUHU</option>
+              <option>VARACHA</option>
+              <option>MG ROAD</option>
+       </select>         
+    <label for="drop">DROP</label>
+    <select name="drop">
+      <option>VILLEY PARLE</option>
+       <option>BAND STAND</option>
+        <option>OCEAN BEACH</option>
+         <option>NORTHEN BAND</option>
+          <option>KAMOTI BAUG</option>
+           <option>ANAND NAGAR</option>
+            <option>JUHU</option>
+              <option>VARACHA</option>
+              <option>MG ROAD</option>
+       </select>    
+       <label for="texitype">TEXI TYPE</label>
+       <select name="texitype">
+      <option>MINI</option>
+       <option>PRIME SEDAN</option>
+        <option>PRIME PLAY</option>
+         <option>PRIME SUV</option>
+          <option>LUX</option>
+           <option>AUTO</option>
+       </select>         
+
+    <input type="submit" value="Search Cab">
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "dheader.html" %}
+{% block content %}
+<center><h1>Your Account</h1></center>
+<table border="2">
+  <tr><td><h1>Usename:</h1></td><td><h1>{{d.username}}</h1></td></tr>
+  <tr><td><h1>Name:</h1></td><td><h1>{{d.fname}} {{d.lname}}</h1></td></tr>
+  <tr><td><h1>City:</h1></td><td><h1>{{d.city}}</h1></td></tr>
+  <tr><td><h1>Phone No:</h1></td><td><h1>{{d.phone_no}}</h1></td></tr>
+  <tr><td><h1>Email Id:</h1></td><td><h1>{{d.email}}</h1></td></tr>
+  <tr><td colspan="2"><h1><a href="/rider/changepassword/">change password</a></h1></td></tr>
+  <tr><td colspan="2"><h1><a href="/driver/dshowhistory/">Show History</a></h1></td></tr>
+ </table>
+{% endblock %}

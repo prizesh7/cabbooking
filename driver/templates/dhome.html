@@ -1,0 +1,16 @@
+{% extends "dheader.html" %}
+{% block content %}
+<div class="center">
+	<font color="red"> {% if messages %}
+  {% for msg in messages %}
+    {{msg}}
+  {% endfor %}
+{% endif %}</font>
+  <form action="/cabsearch/verify/" method="post">{% csrf_token %}
+    <label for="otp">OTP</label>
+    <input type="text" id="otp" name="otp" placeholder="OTP" required>
+
+    <input type="submit" value="verify">
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "header3.html" %}
+{% block content %} 
+<div class="left">    
+    <form action="/cabsearch/endtrip/" method="post">{% csrf_token %}
+    <label for="end">END</label>
+    <input type="submit" value="END">
+  </form>
+</div>
+{% endblock %}
