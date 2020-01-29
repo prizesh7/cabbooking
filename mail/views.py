@@ -37,7 +37,7 @@ def info_cansle(request):
 	server=smtplib.SMTP('smtp.gmail.com',587)
 	server.ehlo()
 	server.starttls()
-	server.login("prizeshbhadaniya@gmail.com","prizesh345")
+	server.login("prizeshbhadaniya@gmail.com","mail password")
 	l=Driver.objects.filter(username=duname)
 	l=list(l.values())
 	l=l[0]
