@@ -24,7 +24,7 @@ def sendemail(request):
 	server=smtplib.SMTP('smtp.gmail.com',587)
 	server.ehlo()
 	server.starttls()
-	server.login("prizeshbhadaniya@gmail.com","prizesh345")
+	server.login("your mail","your mail password")
 	uname = request.user.username
 	email= request.user.email
 	msg='To:'+ email+'\n'+'From:prizeshbhadaniya@gmail.com'+'\n'+'Subject:otp\n'
