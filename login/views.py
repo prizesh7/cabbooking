@@ -68,7 +68,7 @@ def forgotsend(request):
 		server=smtplib.SMTP('smtp.gmail.com',587)
 		server.ehlo()
 		server.starttls()
-		server.login("prizeshbhadaniya@gmail.com","prizesh345")
+		server.login("prizeshbhadaniya@gmail.com","your password of mail")
 		uname = request.user.username
 		email=l['email']
 		msg='To:'+ email+'\n'+'From:prizeshbhadaniya@gmail.com'+'\n'+'Subject:otp\n'
